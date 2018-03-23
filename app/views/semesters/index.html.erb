@@ -12,7 +12,8 @@
       <td><%= semester.semester_num %></td>
       <td><%= semester.year %></td>
       <td><%= semester.start_date %></td>
-      <td><%= link_to 'Show', semester_path(semester) %></td>
+      <td><%= link_to 'View', semester_path(semester) %></td>
+      <td><%= link_to 'Edit', edit_semester_path(semester) %></td>
     </tr>
   <% end %>
 </table>

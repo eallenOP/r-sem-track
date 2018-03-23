@@ -11,6 +11,10 @@ class SemestersController < ApplicationController
         @semester = Semester.new
     end
 
+    def edit
+        @semester = Semester.find(params[:id])
+    end
+
     def create
         @semester = Semester.new(semester_params)
 
@@ -18,6 +22,16 @@ class SemestersController < ApplicationController
             redirect_to @semester
         else
             render 'new'
+        end
+    end
+
+    def update
+        @semester = Semester.find(params[:id])
+
+        if @semester.update(semester_params)
+            redirect_to @semester
+        else
+            render 'edit'
         end
     end
 
