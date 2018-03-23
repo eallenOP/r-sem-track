@@ -1,0 +1,20 @@
+<h1>Listing semesters</h1>
+ 
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Year</th>
+    <th>Start date</th>
+  </tr>
+ 
+  <% @semesters.each do |semester| %>
+    <tr>
+      <td><%= semester.semester_num %></td>
+      <td><%= semester.year %></td>
+      <td><%= semester.start_date %></td>
+      <td><%= link_to 'View', semester_path(semester) %></td>
+      <td><%= link_to 'Edit', edit_semester_path(semester) %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to  "Add a semester", new_semester_path %>

@@ -1,0 +1,13 @@
+
+<p>
+  <strong>Number:</strong>
+  <%= @semester.semester_num %>
+</p>
+ 
+<p>
+  <strong>Year:</strong>
+  <%= @semester.year %>
+</p>
+
+<%= link_to  "Back to semesters list", semesters_path %><br>
+<%= link_to  "Edit this semester", edit_semester_path(@semester) %>
