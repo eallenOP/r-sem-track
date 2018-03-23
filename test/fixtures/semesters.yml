@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  semester_num: MyString
+  year: MyString
+  start_date: 2018-03-23
+
+two:
+  semester_num: MyString
+  year: MyString
+  start_date: 2018-03-23

@@ -2,9 +2,9 @@
 
 <%= form_with scope: :semester, url: semesters_path, local: true do |form| %>
 
-    <%= form.radio_button :semester, 'semester_1' %> 
+    <%= form.radio_button :semester_num, 'semester_1' %> 
     <%= label :semester_1, 'Semester 1' %>
-    <%= form.radio_button :semester, 'semester_2' %>
+    <%= form.radio_button :semester_num, 'semester_2' %>
     <%= label :semester_2, 'Semester 2' %>
     <br>
     <%= form.label :year %><br>
