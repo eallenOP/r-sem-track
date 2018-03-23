@@ -8,14 +8,17 @@ class SemestersController < ApplicationController
     end
     
     def new
-
+        @semester = Semester.new
     end
 
     def create
         @semester = Semester.new(semester_params)
 
-        @semester.save
-        redirect_to @semester
+        if @semester.save
+            redirect_to @semester
+        else
+            render 'new'
+        end
     end
 
     private
